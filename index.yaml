@@ -1,0 +1,132 @@
+apiVersion: v1
+entries:
+  ckan:
+  - apiVersion: v2
+    appVersion: 2.9.2
+    created: "2022-07-21T09:03:40.445860371+01:00"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.0.2
+    - condition: solr.enabled
+      name: solr
+      repository: https://charts.helm.sh/incubator
+      version: 1.4.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.18
+    - condition: datapusher.enabled
+      name: datapusher
+      repository: https://keitaro-charts.storage.googleapis.com
+      version: 1.0.0
+    description: CKAN Helm chart
+    digest: 20a65c45ada22d08229f3130d36152e473d0fa71cf1e81cbe47f586a1bd79391
+    name: ckan
+    type: application
+    urls:
+    - https://m3rryqold.github.io/helm-chart/ckan-1.0.2.tgz
+    version: 1.0.2
+  datapusher:
+  - apiVersion: v2
+    appVersion: 0.0.17
+    created: "2022-07-21T09:03:40.446411009+01:00"
+    description: CKAN Datapusher helm chart
+    digest: 2b2b89349020450bdd2db80807d22ba558f63e7318a307d3e89a04b7b6d2762d
+    name: datapusher
+    type: application
+    urls:
+    - https://m3rryqold.github.io/helm-chart/charts/datapusher-1.0.0.tgz
+    version: 1.0.0
+  postgresql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 14.4.0
+    created: "2022-07-21T09:03:40.450896939+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: 2319f64e92b98af39c9355e22521f33fadbe324d56472432b0b362db7dce831c
+    home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    - https://www.postgresql.org/
+    urls:
+    - https://m3rryqold.github.io/helm-chart/charts/postgresql-11.6.18.tgz
+    version: 11.6.18
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 7.0.4
+    created: "2022-07-21T09:03:40.455682164+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: 23b12aa4f0b94b39bb8e96abc0a573831b01d0cbff399d0e4be6134fb510afeb
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    urls:
+    - https://m3rryqold.github.io/helm-chart/charts/redis-17.0.2.tgz
+    version: 17.0.2
+  solr:
+  - apiVersion: v1
+    appVersion: 8.4.0
+    created: "2022-07-21T09:03:40.458461397+01:00"
+    dependencies:
+    - name: zookeeper
+      repository: https://kubernetes-charts-incubator.storage.googleapis.com/
+      version: 2.1.3
+    description: 'A helm chart to install Apache Solr: http://lucene.apache.org/solr/'
+    digest: f09dc723e0ac609e435ec50e82d0e9876c18c902605b230b2862e37229d79d23
+    home: http://lucene.apache.org/solr/
+    keywords:
+    - solr
+    maintainers:
+    - email: ian.thebridge@lucidworks.com
+      name: ian-thebridge-lucidworks
+    name: solr
+    sources:
+    - https://gitbox.apache.org/repos/asf?p=lucene-solr.git
+    urls:
+    - https://m3rryqold.github.io/helm-chart/charts/solr-1.4.0.tgz
+    version: 1.4.0
+generated: "2022-07-21T09:03:40.429489761+01:00"
