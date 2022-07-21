@@ -3,7 +3,7 @@ entries:
   ckan:
   - apiVersion: v2
     appVersion: 2.9.2
-    created: "2022-07-21T09:51:04.558846177+01:00"
+    created: "2022-07-21T12:08:58.618098039+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -22,7 +22,7 @@ entries:
       repository: https://keitaro-charts.storage.googleapis.com
       version: 1.0.0
     description: CKAN Helm chart
-    digest: e732e3c38e612329bcccc23c75f76b837500d999c7a47f721991693a33de02e4
+    digest: df4080073ded204d62457b8e59bd7650946e4af9af165831dfd7c4f626681451
     name: ckan
     type: application
     urls:
@@ -31,7 +31,7 @@ entries:
   datapusher:
   - apiVersion: v2
     appVersion: 0.0.17
-    created: "2022-07-21T09:51:04.559428563+01:00"
+    created: "2022-07-21T12:08:58.618569435+01:00"
     description: CKAN Datapusher helm chart
     digest: 2b2b89349020450bdd2db80807d22ba558f63e7318a307d3e89a04b7b6d2762d
     name: datapusher
@@ -44,7 +44,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 14.4.0
-    created: "2022-07-21T09:51:04.564285+01:00"
+    created: "2022-07-21T12:08:58.622953962+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -79,7 +79,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 7.0.4
-    created: "2022-07-21T09:51:04.570146607+01:00"
+    created: "2022-07-21T12:08:58.627878547+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -110,7 +110,7 @@ entries:
   solr:
   - apiVersion: v1
     appVersion: 8.4.0
-    created: "2022-07-21T09:51:04.572286631+01:00"
+    created: "2022-07-21T12:08:58.629621703+01:00"
     dependencies:
     - name: zookeeper
       repository: https://kubernetes-charts-incubator.storage.googleapis.com/
@@ -129,4 +129,4 @@ entries:
     urls:
     - https://m3rryqold.github.io/ckan-helm/charts/solr-1.4.0.tgz
     version: 1.4.0
-generated: "2022-07-21T09:51:04.532447822+01:00"
+generated: "2022-07-21T12:08:58.473433891+01:00"
