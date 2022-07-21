@@ -42,7 +42,7 @@ spec:
         # It is recommended to use the latest version of the Cloud SQL proxy
         # Make sure to update on a regular schedule!
           image: gcr.io/cloudsql-docker/gce-proxy:1.28.0 # make sure the use the latest version
-          command: ["/cloud_sql_proxy", "-log_debug_stdout", "-instances={{ .Values.db_name }}=tcp:{{ .Values.db_port }}"] 
+          command: ["/cloud_sql_proxy", "-log_debug_stdout", "-instances={{ .Values.db_connection }}=tcp:{{ .Values.db_port }}"] 
 
           # If connecting from a VPC-native GKE cluster, you can use the
           # following flag to have the proxy connect over private IP
