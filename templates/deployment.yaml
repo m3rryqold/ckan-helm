@@ -41,9 +41,8 @@ spec:
         - name: cloud-sql-proxy
         # It is recommended to use the latest version of the Cloud SQL proxy
         # Make sure to update on a regular schedule!
-        image: gcr.io/cloudsql-docker/gce-proxy:1.28.0 # make sure the use the latest version
-        command:
-          - "/cloud_sql_proxy"
+          image: gcr.io/cloudsql-docker/gce-proxy:1.28.0 # make sure the use the latest version
+          command: ["/cloud_sql_proxy", "-log_debug_stdout", "-instances={{ .Values.db_name }}=tcp:{{ .Values.db_port }}"] 
 
           # If connecting from a VPC-native GKE cluster, you can use the
           # following flag to have the proxy connect over private IP
@@ -53,11 +52,9 @@ spec:
           # environments, anything printed to stderr is consider an error. To
           # disable this behavior and write all logs to stdout (except errors
           # which will still go to stderr), use:
-          - "-log_debug_stdout"
 
           # Replace DB_PORT with the port the proxy should listen on
           # Defaults: MySQL: 3306, Postgres: 5432, SQLServer: 1433
-          - "-instances={{ .Values.db_name }}=tcp:{{ .Values.db_port }}"
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
